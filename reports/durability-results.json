@@ -1,0 +1,973 @@
+{
+  "generated_at": "2026-09-21T09:58:56Z",
+  "steps": 6,
+  "crash_step": 3,
+  "crash_steps": [
+    3
+  ],
+  "services": [
+    "sqlite",
+    "http"
+  ],
+  "lease_seconds": 2,
+  "results": [
+    {
+      "strategy": "naive",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "sqlite"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "transport_drop",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "transport_drop",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 10,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 4,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "transport_fail",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 9,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 3,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "naive",
+      "crash_point": "transport_fail",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 9,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 3,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "transport_drop",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "transport_drop",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "transport_fail",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "checkpoint",
+      "crash_point": "transport_fail",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "transport_drop",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 7,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 1,
+        "max_applications_per_key": 2,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "transport_drop",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "transport_fail",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable",
+      "crash_point": "transport_fail",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_effect",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_effect",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_complete",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "after_complete",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        137,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "transport_drop",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        0
+      ],
+      "recovery_attempts": 1,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "transport_drop",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        0
+      ],
+      "recovery_attempts": 1,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "transport_fail",
+      "downstream": "non_idempotent",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    },
+    {
+      "strategy": "durable_query",
+      "crash_point": "transport_fail",
+      "downstream": "honors_key",
+      "child_exit_codes": [
+        3,
+        0
+      ],
+      "recovery_attempts": 2,
+      "metrics": {
+        "total_applications": 6,
+        "distinct_keys": 6,
+        "expected_keys": 6,
+        "duplicate_applications": 0,
+        "max_applications_per_key": 1,
+        "lost_keys": 0
+      },
+      "crash_step": 3,
+      "service": "http"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# The harnesses run against the public Python SDK; the fidelity suite also
+# calls an OpenAI-compatible endpoint for the pipeline and the judge.
+actae-client>=1.3.0
+openai>=1.40
